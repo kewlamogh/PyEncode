@@ -1,9 +1,12 @@
 //...
 
 let textToNumber = {};
+let numberToText = {};
 function addKeyToTextToNumber(keyName, keyVal) {
     textToNumber[keyName.toLowerCase()] = keyVal;
     textToNumber[keyName.toUpperCase()] = keyVal;
+
+    numberToText[keyVal.toString()] = keyName;
 }
 
 function encode(txt) {
@@ -12,9 +15,18 @@ function encode(txt) {
     for (var i in chars) {
         encoded.push(textToNumber[chars[i]]);
     }
-    console.log(encoded.join(''));
+    console.log(encoded.join('/'));
 }
 
+function decode(txt) {
+    let letters = txt.split('/');
+    let decoded = [];
+    for (var i in letters) {
+        decoded.push(numberToText[letters[i]]);
+    }
+
+    console.log(decoded.join(''));
+}
 addKeyToTextToNumber('a', 2);
 addKeyToTextToNumber('b', 3);
 addKeyToTextToNumber('c', 4);
@@ -42,5 +54,6 @@ addKeyToTextToNumber('x', 25);
 addKeyToTextToNumber('y', 26);
 addKeyToTextToNumber('z', 1);
 addKeyToTextToNumber(' ', '-');
+addKeyToTextToNumber('.', '🤘')
 
-encode('I am evil the dumbo')
+encode('I am evil the dumbo');
