@@ -67,7 +67,7 @@ class EncodeJS{
 
 
 let encoder = new EncodeJS();
-let lolEncoded = encoder.encode('12345678910111213');
+let lolEncoded = encoder.encode('123456789');
 let lolDecoded = encoder.decode(lolEncoded);
 
 console.log('Encoded is: '+lolEncoded);
