@@ -15,19 +15,19 @@ class EncodeJS{
         let chars = txt.split('');
         let encoded = [];
         for (var i in chars) {
-            encoded.push(this.textToNumber[chars[i]]);
+            encoded.push(this.textToNumber[i]);
         }
-        return (encoded.join(':'));
+        return encoded.join(':');
     }
 
     decode(txt) {
         let letters = txt.split(':');
         let decoded = [];
         for (var i in letters) {
-            decoded.push(this.numberToText[letters[i]]);
+            decoded.push(this.numberToText[i]);
         }
 
-        return (decoded.join(''));
+        return decoded.join('');
     }
 
     initialize() {
