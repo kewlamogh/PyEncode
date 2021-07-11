@@ -55,6 +55,8 @@ addKeyToTextToNumber('y', 26);
 addKeyToTextToNumber('z', 1);
 addKeyToTextToNumber(' ', '-');
 addKeyToTextToNumber('.', '🤘')
+addKeyToTextToNumber('!', '🏴')
+addKeyToTextToNumber('?', '👨‍💻')
 
 document.onkeydown = function (event) {
     if (event.keyCode == 13) {
