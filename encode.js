@@ -16,6 +16,7 @@ class EncodeJS{
         let encoded = [];
         for (var i in chars) {
             encoded.push(this.textToNumber[i]);
+            console.log(i);
         }
         return encoded.join(':');
     }
