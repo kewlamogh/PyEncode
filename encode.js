@@ -10,8 +10,8 @@ function addKeyToTextToNumber(keyName, keyVal) {
 function encode(txt) {
     let chars = txt.split('');
     let encoded = [];
-    for (var i in chars) {
-        encoded.push(textToNumber[i]);
+    for (var i = 0; i <= chars.length - 1; i++) {
+        encoded.push(textToNumber[chars[i]]);
         console.log(i);
     }
     return encoded.join(':');
@@ -20,10 +20,9 @@ function encode(txt) {
 function decode(txt) {
     let letters = txt.split(':');
     let decoded = [];
-    for (var i in letters) {
-        decoded.push(numberToText[i]);
+    for (var i = 0; i <= letters.length - 1; i++) {
+        decoded.push(numberToText[letters[i]]);
     }
-
     return decoded.join('');
 }
 
