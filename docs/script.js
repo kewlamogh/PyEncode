@@ -15,7 +15,7 @@ function encode(txt) {
     for (var i in chars) {
         encoded.push(textToNumber[chars[i]]);
     }
-    console.log(encoded.join(':'));
+    return (encoded.join(':'));
 }
 
 function decode(txt) {
@@ -25,7 +25,7 @@ function decode(txt) {
         decoded.push(numberToText[letters[i]]);
     }
 
-    console.log(decoded.join(''));
+    return (decoded.join(''));
 }
 addKeyToTextToNumber('a', 2);
 addKeyToTextToNumber('b', 3);
@@ -56,5 +56,11 @@ addKeyToTextToNumber('z', 1);
 addKeyToTextToNumber(' ', '-');
 addKeyToTextToNumber('.', '🤘')
 
-encode(prompt('Enter text to encode (only letters or periods or spaces): '));
-decode(prompt('Enter text to Decode: '));
+document.getElementById('number').addEventListener('click', function () {
+    document.getElementById('output').innerHTML = encode(this.value);
+})
+document.onkeydown = function () {
+    if (event.keyCode == 13) {
+        document.getElementById('output').innerHTML = decode(document.getElementById('number').value);
+    }
+}
