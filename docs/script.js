@@ -56,11 +56,13 @@ addKeyToTextToNumber('z', 1);
 addKeyToTextToNumber(' ', '-');
 addKeyToTextToNumber('.', '🤘')
 
-document.getElementById('number').addEventListener('click', function () {
-    document.getElementById('output').innerHTML = encode(this.value);
-})
-document.onkeydown = function () {
+document.getElementById('encode').addEventListener('onkeydown', function (event) {
     if (event.keyCode == 13) {
-        document.getElementById('output').innerHTML = decode(document.getElementById('number').value);
+        document.getElementById('output').innerHTML = encode(this.value);
     }
-}
+})
+document.getElementById('decode').addEventListener('onkeydown', function (event) {
+    if (event.keyCode == 13) {
+        document.getElementById('output').innerHTML = decode(this.value);
+    }
+})
