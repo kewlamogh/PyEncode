@@ -61,6 +61,7 @@ function initialize() {
 }
 
 let encoded = encode('Lorem Ipsum');
+console.log(encoded);
 let decoded = decode(encoded);
 console.log(decoded)
 
