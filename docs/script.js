@@ -15,11 +15,11 @@ function encode(txt) {
     for (var i in chars) {
         encoded.push(textToNumber[chars[i]]);
     }
-    console.log(encoded.join('/'));
+    console.log(encoded.join(':'));
 }
 
 function decode(txt) {
-    let letters = txt.split('/');
+    let letters = txt.split(':');
     let decoded = [];
     for (var i in letters) {
         decoded.push(numberToText[letters[i]]);
