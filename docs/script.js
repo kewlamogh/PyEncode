@@ -12,7 +12,7 @@ function encode(txt) {
     for (var i in chars) {
         encoded.push(textToNumber[chars[i]]);
     }
-    console.log(encoded);
+    console.log(encoded.join(''));
 }
 
 addKeyToTextToNumber('a', 2);
