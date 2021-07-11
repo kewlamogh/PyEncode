@@ -56,4 +56,5 @@ addKeyToTextToNumber('z', 1);
 addKeyToTextToNumber(' ', '-');
 addKeyToTextToNumber('.', '🤘')
 
-encode('I am evil the dumbo');
+encode(prompt('Enter text to encode (only letters or periods or spaces): '));
+decode(prompt('Enter text to Decode: '));
