@@ -59,7 +59,7 @@ addKeyToTextToNumber('.', '🤘')
 document.onkeydown = function (event) {
     if (event.keyCode == 13) {
         console.log(encode(prompt('Enter text to encode:')))
-    } else {
+    } else if (event.keyCode == 40){
         console.log(decode(prompt('Enter text to decode:')))
     }
 }
