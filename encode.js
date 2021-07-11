@@ -1,74 +1,66 @@
-class EncodeJS{
-    constructor() {
-        this.textToNumber = {};
-        this.numberToText = {};
-    }
+let textToNumber = {};
+let numberToText = {};
+function addKeyToTextToNumber(keyName, keyVal) {
+    textToNumber[keyName.toLowerCase()] = keyVal;
+    textToNumber[keyName.toUpperCase()] = keyVal;
 
-    addKeyToTextToNumber(keyName, keyVal) {
-        this.textToNumber[keyName.toLowerCase()] = keyVal;
-        this.textToNumber[keyName.toUpperCase()] = keyVal;
-
-        this.numberToText[keyVal.toString()] = keyName;
-    }
-
-    encode(txt) {
-        let chars = txt.split('');
-        let encoded = [];
-        for (var i in chars) {
-            encoded.push(this.textToNumber[i]);
-            console.log(i);
-        }
-        return encoded.join(':');
-    }
-
-    decode(txt) {
-        let letters = txt.split(':');
-        let decoded = [];
-        for (var i in letters) {
-            decoded.push(this.numberToText[i]);
-        }
-
-        return decoded.join('');
-    }
-
-    initialize() {
-        this.addKeyToTextToNumber('a', 2);
-        this.addKeyToTextToNumber('b', 3);
-        this.addKeyToTextToNumber('c', 4);
-        this.addKeyToTextToNumber('d', 5);
-        this.addKeyToTextToNumber('e', 6);
-        this.addKeyToTextToNumber('f', 7);
-        this.addKeyToTextToNumber('g', 8);
-        this.addKeyToTextToNumber('h', 9);
-        this.addKeyToTextToNumber('i', 10);
-        this.addKeyToTextToNumber('j', 11);
-        this.addKeyToTextToNumber('k', 12);
-        this.addKeyToTextToNumber('l', 13);
-        this.addKeyToTextToNumber('m', 14);
-        this.addKeyToTextToNumber('n', 15);
-        this.addKeyToTextToNumber('o', 16);
-        this.addKeyToTextToNumber('p', 17);
-        this.addKeyToTextToNumber('q', 18);
-        this.addKeyToTextToNumber('r', 19);
-        this.addKeyToTextToNumber('s', 20);
-        this.addKeyToTextToNumber('t', 21);
-        this.addKeyToTextToNumber('u', 22);
-        this.addKeyToTextToNumber('v', 23);
-        this.addKeyToTextToNumber('w', 24);
-        this.addKeyToTextToNumber('x', 25);
-        this.addKeyToTextToNumber('y', 26);
-        this.addKeyToTextToNumber('z', 1);
-        this.addKeyToTextToNumber(' ', '-');
-        this.addKeyToTextToNumber('.', '🤘')
-        this.addKeyToTextToNumber('!', '🏴')
-        this.addKeyToTextToNumber('?', '👨‍💻')
-    }
+    numberToText[keyVal.toString()] = keyName;
 }
 
+function encode(txt) {
+    let chars = txt.split('');
+    let encoded = [];
+    for (var i in chars) {
+        encoded.push(textToNumber[i]);
+        console.log(i);
+    }
+    return encoded.join(':');
+}
 
-let encoder = new EncodeJS();
-let lolEncoded = encoder.encode('123456789');
-let lolDecoded = encoder.decode(lolEncoded);
+function decode(txt) {
+    let letters = txt.split(':');
+    let decoded = [];
+    for (var i in letters) {
+        decoded.push(numberToText[i]);
+    }
 
-console.log('Encoded is: '+lolEncoded);
-console.log('Decoded is: '+lolDecoded);
+    return decoded.join('');
+}
+
+function initialize() {
+    addKeyToTextToNumber('a', 2);
+    addKeyToTextToNumber('b', 3);
+    addKeyToTextToNumber('c', 4);
+    addKeyToTextToNumber('d', 5);
+    addKeyToTextToNumber('e', 6);
+    addKeyToTextToNumber('f', 7);
+    addKeyToTextToNumber('g', 8);
+    addKeyToTextToNumber('h', 9);
+    addKeyToTextToNumber('i', 10);
+    addKeyToTextToNumber('j', 11);
+    addKeyToTextToNumber('k', 12);
+    addKeyToTextToNumber('l', 13);
+    addKeyToTextToNumber('m', 14);
+    addKeyToTextToNumber('n', 15);
+    addKeyToTextToNumber('o', 16);
+    addKeyToTextToNumber('p', 17);
+    addKeyToTextToNumber('q', 18);
+    addKeyToTextToNumber('r', 19);
+    addKeyToTextToNumber('s', 20);
+    addKeyToTextToNumber('t', 21);
+    addKeyToTextToNumber('u', 22);
+    addKeyToTextToNumber('v', 23);
+    addKeyToTextToNumber('w', 24);
+    addKeyToTextToNumber('x', 25);
+    addKeyToTextToNumber('y', 26);
+    addKeyToTextToNumber('z', 1);
+    addKeyToTextToNumber(' ', '-');
+    addKeyToTextToNumber('.', '🤘')
+    addKeyToTextToNumber('!', '🏴')
+    addKeyToTextToNumber('?', '👨‍💻')
+}
+
+let encoded = encode('Lorem Ipsum');
+let decoded = decode(encoded);
+console.log(decoded)
+
