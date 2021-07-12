@@ -65,6 +65,7 @@ class EncodePy:
       self.addKeyToTextToNumber('_', 111)
       self.addKeyToTextToNumber('@', 112)
       self.addKeyToTextToNumber(':', 113)
+      self.addKeyToTextToNumber(',', 115)
   
   def __init__(self):
     self.textToNumber = {}
