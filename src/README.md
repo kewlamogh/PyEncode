@@ -1,6 +1,6 @@
 # PyEncode - your super secure, simple to use, cipher!
 ## Download
-Check out (or create a pull request) this repository, or go [here](). 
+Check out (or create a pull request) this repository and move `encode.py` to your program's folder.  
 
 
 ## Getting started
