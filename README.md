@@ -17,7 +17,7 @@ myEncoder = EncodePy()
 ```
 
 ## Functions
-#### Note: for example purposes, the instance of the `EncodePy` class will be `myEncoder`
+#### _Note: for example purposes, the instance of the `EncodePy` class will be `myEncoder`_
 
 |Function|Purpose|
 ---|---
