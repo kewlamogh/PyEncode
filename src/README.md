@@ -1,8 +1,11 @@
 # PyEncode - your super secure, simple to use, cipher!
-## Getting started
-First, download the `pyencode.py` file and link it to your project.
+## Download
+Check out (or create a pull request) this repository, or go [here](). 
 
-Then,
+
+## Getting started
+
+Import pyencode,
 ```py
 import pyencode
 myEncoder = pyencode.EncodePy()
@@ -21,5 +24,4 @@ myEncoder = EncodePy()
 |`myEncoder.encode(text)`|Encodes text and returns value in encoded format|
 |`myEncoder.decode(encodedText)`|Decodes encoded text.|
 |`myEncoder.addKeyToTextToNumber(keyname, keycode)`|Adds key to encode algorithm (e.g., more characters can be allowed like 👨 or 🤘)|
-|`myEncoder.initialize()`|Is called during the `__init__` function, sets up the foundation for the encode algorithm. useful when accidentally overwriting a default when using `addKeyToTextToNumber`. Does not delete extra characters.|
-
+|`myEncoder.initialize()`|Is called during the `__init__` function, sets up the foundation for the encode algorithm. Useful when accidentally overwriting a default when using `addKeyToTextToNumber`. Does not delete extra characters.|
