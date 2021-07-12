@@ -11,3 +11,7 @@ class Demo():
     self.testSubject = 'This is super classified message - for only Bob and I.'
     print('Encoded: '+self.encoder.encode(self.testSubject))
     print('Decoded: '+self.encoder.decode(self.encoder.encode(testSubject)))
+demoer = Demo()
+demoer.example1()
+demoer.example2()
+
