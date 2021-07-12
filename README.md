@@ -28,7 +28,11 @@ myEncoder = EncodePy() # EncodePy class
 
 ## Characters supported
 A-Z and a-z
+
+
 0-9
+
+
 ?.!-_@:,
 
 To add more characters, use the `addKeyToTextToNumber(keyname, ciphered)` function. If your message contains an unsupported character, then you will get an error in the terminal/console.
