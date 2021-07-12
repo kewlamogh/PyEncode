@@ -23,7 +23,14 @@ myEncoder = EncodePy() # EncodePy class
 ---|---
 |`myEncoder.encode(text)`|Encodes text and returns value in encoded format|
 |`myEncoder.decode(encodedText)`|Decodes encoded text.|
-|`myEncoder.addKeyToTextToNumber(keyname, keycode)`|Adds key to encode algorithm (e.g., more characters can be allowed like 👨 or 🤘)|
+|`myEncoder.addKeyToTextToNumber(keyname, ciphered)`|Adds key to encode algorithm (e.g., more characters can be allowed like 👨 or 🤘)|
 |`myEncoder.initialize()`|Is called during the `__init__` function, sets up the foundation for the encode algorithm. Useful when accidentally overwriting a default when using `addKeyToTextToNumber`. Does not delete extra characters.|
 
-#### _Disclaimer: This does not have protection. If someone (who isn't supposed to get the ciphered `str`) gets it, they will be able to decode it using the `decode` function. However this rarely happens unintentionally since most messaging platforms (e.g., Google Chat or WhatsApp) have DM systems. I did not implement this in my module since this is mostly for in-program use (e.g., when you don't want the client to `console` hack the cheat codes of the game)._
+## Characters supported
+A-Z and a-z
+0-9
+?.!-_@:,
+
+To add more characters, use the `addKeyToTextToNumber(keyname, ciphered)` function. If your message contains an unsupported character, then you will get an error in the terminal/console.
+
+#### _Disclaimer: This does not have protection. If someone (who isn't supposed to get the ciphered `str`) gets it, they will be able to decode it using the `decode` function. However this rarely happens unintentionally since most messaging platforms (e.g., Google Chat or WhatsApp) have DM systems. I did not implement this in my module since this is mostly for in-program use (e.g., when you don't want the client to `console` hack the cheat codes of the game). As a result, it is ill-advised to use this for really confidential stuff, like credit card numbers and more._
