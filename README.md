@@ -8,12 +8,12 @@ Check out (or create a pull request) this repository and move `encode.py` to you
 Import pyencode,
 ```py
 import pyencode
-myEncoder = pyencode.EncodePy()
+myEncoder = pyencode.EncodePy() #getting the EncodePy class from the module
 ```
 Alternatively,
 ```py
 from pyencode import EncodePy
-myEncoder = EncodePy()
+myEncoder = EncodePy() # EncodePy class
 ```
 
 ## Functions
