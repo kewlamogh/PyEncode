@@ -17,14 +17,13 @@ myEncoder = EncodePy() # EncodePy class
 ```
 
 ## Functions
-#### _Note: for example purposes, the instance of the `EncodePy` class will be `myEncoder`_
 
 |Function|Purpose|
 ---|---
-|`myEncoder.encode(text)`|Encodes text and returns value in encoded format|
-|`myEncoder.decode(encodedText)`|Decodes encoded text.|
-|`myEncoder.addKeyToTextToNumber(keyname, ciphered)`|Adds key to encode algorithm (e.g., more characters can be allowed like 👨 or 🤘)|
-|`myEncoder.initialize()`|Is called during the `__init__` function, sets up the foundation for the encode algorithm. Useful when accidentally overwriting a default when using `addKeyToTextToNumber`. Does not delete extra characters.|
+|`EncodePy.encode(text)`|Encodes text and returns value in encoded format|
+|`EncodePy.decode(encodedText)`|Decodes encoded text.|
+|`EncodePy.addKeyToTextToNumber(keyname, ciphered)`|Adds key to encode algorithm (e.g., more characters can be allowed like 👨 or 🤘)|
+|`EncodePy.initialize()`|Is called during the `__init__` function, sets up the foundation for the encode algorithm. Useful when accidentally overwriting a default when using `addKeyToTextToNumber`. Does not delete extra characters.|
 
 ## Characters supported
 A-Za-z0-9?.!-_@:,;
